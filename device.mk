@@ -43,6 +43,9 @@ AB_OTA_PARTITIONS += \
     system_ext
 
 # Camera
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++.so
+
 PRODUCT_PACKAGES += \
     libc++demangle_vendor
 
