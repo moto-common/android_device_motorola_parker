@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=hanoip
+DEVICE=foles
 VENDOR=motorola
 
 # Load extract_utils and do some sanity checks

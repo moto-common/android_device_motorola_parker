@@ -13,25 +13,28 @@
 # limitations under the License.
 
 # Device path
-DEVICE_PATH := device/motorola/hanoip/rootdir
+DEVICE_PATH := device/motorola/foles/rootdir
 
 DEVICE_PACKAGE_OVERLAYS += \
-    device/motorola/hanoip/overlay
+    device/motorola/foles/overlay
 
 # Kernel
 PRODUCT_COPY_FILES += \
-    device/motorola/sm6150-common-kernel/sm6150-moto-Image.gz:kernel
+    device/motorola/foles-kernel/Image.gz:kernel
 
 # Audio Configuration
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/vendor/etc/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
+    $(DEVICE_PATH)/vendor/etc/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     $(DEVICE_PATH)/vendor/etc/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     $(DEVICE_PATH)/vendor/etc/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
 # Device Init
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/vendor/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
+
 PRODUCT_PACKAGES += \
-    fstab.hanoip \
-    vendor-fstab.hanoip \
+    vendor-fstab.foles \
     init.recovery.qcom.rc
 
 # AB Partitions
@@ -54,4 +57,4 @@ TARGET_USES_FPC_FINGERPRINT := true
 $(call inherit-product, device/motorola/sm6150-common/platform.mk)
 
 # include board vendor blobs
-$(call inherit-product-if-exists, vendor/motorola/hanoip/hanoip-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/foles/foles-vendor.mk)

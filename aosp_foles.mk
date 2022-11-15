@@ -12,8 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/aosp_foles.mk
+# Inherit from those products. Most specific first.
+$(call inherit-product, device/motorola/foles/device.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-COMMON_LUNCH_CHOICES += \
-    aosp_foles-eng \
-    aosp_foles-userdebug
+PRODUCT_NAME := aosp_foles
+PRODUCT_DEVICE := foles
+PRODUCT_MODEL := moto g60 (AOSP)
+PRODUCT_BRAND := motorola
+PRODUCT_MANUFACTURER := motorola
