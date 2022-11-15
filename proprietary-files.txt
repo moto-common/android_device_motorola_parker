@@ -87,9 +87,6 @@ vendor/lib/libcamxfdengine.so
 vendor/lib/libcamxstatscore.so
 vendor/lib/libcamxswprocessalgo.so
 vendor/lib/libcamxtintlessalgo.so
-vendor/lib/libcapiv2svacnn.so
-vendor/lib/libcapiv2svarnn.so
-vendor/lib/libcapiv2vop.so
 vendor/lib/libcom.qti.chinodeutils.so
 vendor/lib/libmot_afd.so
 vendor/lib/libmot_bu24218_factory.so
@@ -165,9 +162,6 @@ vendor/lib64/libcamxfdengine.so
 vendor/lib64/libcamxstatscore.so
 vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
-vendor/lib64/libcapiv2svacnn.so
-vendor/lib64/libcapiv2svarnn.so
-vendor/lib64/libcapiv2vop.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libmot_afd.so
 vendor/lib64/libmot_bu24218_factory.so
@@ -185,7 +179,22 @@ vendor/etc/qdcm_calib_data_mipi_mot_cmd_tianma_1080p_639.xml
 # Display (HDR)
 vendor/etc/hdr_tm_config.xml
 
+# Fingerprint
+vendor/lib64/hw/fingerprint.goodix.so
+vendor/lib64/libgf_hal.so
+vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1_vendor.so
+vendor/lib64/com.motorola.hardware.display.panel@1.0.so
+
 # Firmware (Audio)
+vendor/firmware/crus_sp_rx0.bin
+vendor/firmware/crus_sp_rx1.bin
+vendor/firmware/crus_sp_rx2.bin
+vendor/firmware/crus_sp_rx3.bin
+vendor/firmware/cs35l41-dsp1-spk-cali.bin
+vendor/firmware/cs35l41-dsp1-spk-diag.wmfw
+vendor/firmware/cs35l41-dsp1-spk-prot.bin
+vendor/firmware/cs35l41-dsp1-spk-prot.wmfw
+vendor/firmware/cs40l20.wmfw
 vendor/firmware/marley-dsp1-ultrasound.bin
 vendor/firmware/marley-dsp1-ultrasound.wmfw
 vendor/firmware/marley-dsp2-aov-frontend.wmfw
@@ -208,6 +217,9 @@ vendor/firmware/goodix_cfg_group2.bin
 # Firmware (Vibrator)
 vendor/firmware/aw869x_haptic.bin
 vendor/firmware/aw869x_rtp.bin
+
+# Sensors
+vendor/lib64/libsnsapi.so:vendor/lib64/libsnsapl.so
 
 # Sensor Configs
 vendor/etc/sensors/hals.conf

@@ -63,6 +63,15 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup() {
+    case "${1}" in
+        # camera shim
+        vendor/lib64/hw/camera.qcom.so)
+            patchelf --replace-needed libsnsapi.so libsnsapl.so "${2}"
+            ;;
+    esac
+}
+
 # Initialize the helper.
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
