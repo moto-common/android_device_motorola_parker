@@ -17,9 +17,6 @@ TARGET_USES_LEGACY_AB := true
 # Device path
 DEVICE_PATH := device/motorola/okinawa/rootdir
 
-DEVICE_PACKAGE_OVERLAYS += \
-    device/motorola/okinawa/overlay
-
 # Kernel
 PRODUCT_COPY_FILES += \
     device/motorola/okinawa-kernel/Image.gz:kernel
@@ -56,6 +53,11 @@ PRODUCT_PROPERTY_OVERRIDES := \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service-okinawa
+
+# Overlay
+PRODUCT_PACKAGES += \
+    okinawaFrameworkOverlay \
+    okinawaSystemUIOverlay
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/motorola/sm6150-common/platform.mk)
