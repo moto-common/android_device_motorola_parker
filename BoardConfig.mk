@@ -39,5 +39,8 @@ TARGET_NO_RECOVERY := true
 
 TARGET_SURFACEFLINGER_UDFPS_LIB := //device/motorola/okinawa:libudfps_extension.okinawa
 
+# Fingerprint
+TARGET_USES_FINGERPRINT_V2_1 := false
+
 # PlatformConfig
 include device/motorola/sm6150-common/PlatformConfig.mk
