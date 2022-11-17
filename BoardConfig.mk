@@ -36,7 +36,8 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 # This target has no recovery partition
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
-TARGET_USES_LEGACY_AB := true
+
+TARGET_SURFACEFLINGER_UDFPS_LIB := //device/motorola/okinawa:libudfps_extension.okinawa
 
 # PlatformConfig
 include device/motorola/sm6150-common/PlatformConfig.mk

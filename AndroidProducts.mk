@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/aosp_foles.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/aosp_okinawa.mk
 
 COMMON_LUNCH_CHOICES += \
-    aosp_foles-eng \
-    aosp_foles-userdebug
+    aosp_okinawa-eng \
+    aosp_okinawa-userdebug

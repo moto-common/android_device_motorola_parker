@@ -13,12 +13,12 @@
 # limitations under the License.
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/motorola/foles/device.mk)
+$(call inherit-product, device/motorola/okinawa/device.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-PRODUCT_NAME := aosp_foles
-PRODUCT_DEVICE := foles
-PRODUCT_MODEL := moto g60 (AOSP)
+PRODUCT_NAME := aosp_okinawa
+PRODUCT_DEVICE := okinawa
+PRODUCT_MODEL := moto z4 (AOSP)
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola

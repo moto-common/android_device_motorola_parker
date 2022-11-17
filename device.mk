@@ -12,15 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+TARGET_USES_LEGACY_AB := true
+
 # Device path
-DEVICE_PATH := device/motorola/foles/rootdir
+DEVICE_PATH := device/motorola/okinawa/rootdir
 
 DEVICE_PACKAGE_OVERLAYS += \
-    device/motorola/foles/overlay
+    device/motorola/okinawa/overlay
 
 # Kernel
 PRODUCT_COPY_FILES += \
-    device/motorola/foles-kernel/Image.gz:kernel
+    device/motorola/okinawa-kernel/Image.gz:kernel
 
 # Audio Configuration
 PRODUCT_COPY_FILES += \
@@ -31,16 +33,11 @@ PRODUCT_COPY_FILES += \
 
 # Device Init
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/vendor/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
+    $(DEVICE_PATH)/vendor/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom \
+    $(DEVICE_PATH)/vendor/etc/init/init.okinawa.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.okinawa.rc
 
 PRODUCT_PACKAGES += \
-    vendor-fstab.foles \
     init.recovery.qcom.rc
-
-# AB Partitions
-AB_OTA_PARTITIONS += \
-    vendor_boot \
-    system_ext
 
 # Camera
 PRODUCT_COPY_FILES += \
@@ -57,11 +54,11 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.sf.lcd_density=400
 
 # Fingerprint
-TARGET_USES_CHIPONE_FINGERPRINT := true
-TARGET_USES_FPC_FINGERPRINT := true
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.3-service-okinawa
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/motorola/sm6150-common/platform.mk)
 
 # include board vendor blobs
-$(call inherit-product-if-exists, vendor/motorola/foles/foles-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/okinawa/okinawa-vendor.mk)

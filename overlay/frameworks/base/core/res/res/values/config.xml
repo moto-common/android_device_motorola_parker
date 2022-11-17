@@ -51,9 +51,9 @@
     <dimen name="quick_qs_offset_height">@dimen/status_bar_height_portrait</dimen>
     
     <!-- Height of the status bar -->
-    <dimen name="status_bar_height">82.0px</dimen>
+    <dimen name="status_bar_height">25.0dip</dimen>
     <dimen name="status_bar_height_landscape">24.0dip</dimen>
-    <dimen name="status_bar_height_portrait">82.0px</dimen>
+    <dimen name="status_bar_height_portrait">25.0dip</dimen>
 
     <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
     <integer-array name="config_udfps_sensor_props" translatable="false" >
@@ -69,4 +69,7 @@
 
     <!-- How long it takes for the HW to start illuminating after the illumination is requested. -->
     <integer name="config_udfps_illumination_transition_ms">0</integer>
+
+    <!-- The padding of the rounded corners -->
+    <dimen name="rounded_corner_content_padding">9dp</dimen>
 </resources>

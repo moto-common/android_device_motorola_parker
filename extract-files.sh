@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=foles
+DEVICE=okinawa
 VENDOR=motorola
 
 # Load extract utilities and do some sanity checks.
