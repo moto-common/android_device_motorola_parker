@@ -59,6 +59,11 @@ PRODUCT_PACKAGES += \
     okinawaFrameworkOverlay \
     okinawaSystemUIOverlay
 
+# Media
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/vendor/etc/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
+    $(DEVICE_PATH)/vendor/etc/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/motorola/sm6150-common/platform.mk)
 
