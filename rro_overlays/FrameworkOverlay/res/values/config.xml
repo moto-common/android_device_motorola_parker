@@ -48,7 +48,7 @@
     <string name="config_mainBuiltInDisplayCutout">M -72,0 L -72,76 L 72,76 L 72,0 Z</string>
 
     <!-- Height of area above QQS where battery/time go. -->
-    <dimen name="quick_qs_offset_height">@dimen/status_bar_height_portrait</dimen>
+    <dimen name="quick_qs_offset_height">122.0px</dimen>
     
     <!-- Height of the status bar -->
     <dimen name="status_bar_height">25.0dip</dimen>
