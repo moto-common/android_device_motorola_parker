@@ -30,7 +30,6 @@ PRODUCT_COPY_FILES += \
 
 # Device Init
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/vendor/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom \
     $(DEVICE_PATH)/vendor/etc/init/init.okinawa.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.okinawa.rc
 
 PRODUCT_PACKAGES += \
