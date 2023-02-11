@@ -18,9 +18,7 @@ vendor/lib64/libvidhance.so
 # Camera
 lib/libchromaflash.so
 lib64/libseemore.so
-vendor/bin/hw/motorola.hardware.camera.imgtuner@1.0-service
 vendor/bin/vl53l1_daemon_main
-vendor/etc/init/motorola.hardware.camera.imgtuner@1.0-service.rc
 vendor/lib/camera/com.mot.eeprom.cat24c64_s5kgm1sp_eeprom.so
 vendor/lib/camera/com.mot.eeprom.s5k2x5sp_eeprom.so
 vendor/lib/camera/com.qti.eeprom.truly_cmb433.so
@@ -220,6 +218,7 @@ vendor/firmware/aw869x_rtp.bin
 
 # Sensors
 vendor/lib64/libsnsapi.so:vendor/lib64/libsnsapl.so
+vendor/lib64/sensors.tof.vl53l1.so
 
 # Sensor Configs
 vendor/etc/sensors/hals.conf
