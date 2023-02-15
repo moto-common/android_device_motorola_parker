@@ -17,10 +17,6 @@ BOARD_BOOT_HEADER_VERSION := 2
 
 TARGET_BOOTLOADER_BOARD_NAME := foles
 
-# Kernel Modules
-BOARD_VENDOR_KERNEL_MODULES := \
-    $(wildcard device/motorola/$(PRODUCT_DEVICE)-kernel/modules/*.ko)
-
 # Platform
 PRODUCT_PLATFORM := sm6150
 

@@ -17,10 +17,6 @@ TARGET_USES_LEGACY_AB := true
 # Device path
 DEVICE_PATH := device/motorola/okinawa/rootdir
 
-# Kernel
-PRODUCT_COPY_FILES += \
-    device/motorola/okinawa-kernel/Image.gz:kernel
-
 # Audio Configuration
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/vendor/etc/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
@@ -31,9 +27,6 @@ PRODUCT_COPY_FILES += \
 # Device Init
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/vendor/etc/init/init.okinawa.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.okinawa.rc
-
-PRODUCT_PACKAGES += \
-    init.recovery.qcom.rc
 
 # Camera
 PRODUCT_COPY_FILES += \
