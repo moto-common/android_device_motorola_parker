@@ -35,6 +35,7 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
 
 TARGET_SURFACEFLINGER_UDFPS_LIB := //device/motorola/okinawa:libudfps_extension.okinawa
+TARGET_USES_FOD_ZPOS := true
 
 # Fingerprint
 TARGET_USES_FINGERPRINT_V2_1 := false
