@@ -77,7 +77,6 @@ vendor/lib/camera/fdconfigvideolite.bin
 vendor/lib/hw/camera.qcom.so
 vendor/lib/hw/com.qti.chi.override.so
 vendor/lib/hw/libcamera_mods_legacy_hal.so
-vendor/lib/hw/motorola.hardware.camera.imgtuner@1.0-impl.so
 vendor/lib/libcamera_nn_stub.so
 vendor/lib/libcamxfdalgov7.so
 vendor/lib/libcamxfdalgov8.so
@@ -94,7 +93,6 @@ vendor/lib/libswregistrationalgo.so
 vendor/lib/libswvdec.so
 vendor/lib/libvideoutils.so
 vendor/lib/motorola.hardware.camera.device@1.0_vendor.so
-vendor/lib/motorola.hardware.camera.imgtuner@1.0.so
 vendor/lib64/camera/com.mot.eeprom.cat24c64_s5kgm1sp_eeprom.so
 vendor/lib64/camera/com.mot.eeprom.s5k2x5sp_eeprom.so
 vendor/lib64/camera/com.qti.eeprom.truly_cmb433.so
@@ -152,7 +150,6 @@ vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so
-vendor/lib64/hw/motorola.hardware.camera.imgtuner@1.0-impl.so
 vendor/lib64/libcamera_nn_stub.so
 vendor/lib64/libcamxfdalgov7.so
 vendor/lib64/libcamxfdalgov8.so
@@ -168,7 +165,6 @@ vendor/lib64/libmot_lux_standardization.so
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libswvdec.so
 vendor/lib64/motorola.hardware.camera.device@1.0_vendor.so
-vendor/lib64/motorola.hardware.camera.imgtuner@1.0.so
 
 # Display (Calibration Data)
 vendor/etc/qdcm_calib_data_mipi_mot_cmd_smd_1080p_639.xml
