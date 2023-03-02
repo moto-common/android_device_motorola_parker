@@ -46,11 +46,6 @@ PRODUCT_PROPERTY_OVERRIDES := \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service-okinawa
 
-# Overlay
-PRODUCT_PACKAGES += \
-    okinawaFrameworkOverlay \
-    okinawaSystemUIOverlay
-
 # Media
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/vendor/etc/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
