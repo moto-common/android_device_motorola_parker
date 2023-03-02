@@ -12,13 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Boot Header
-BOARD_BOOT_HEADER_VERSION := 2
-
-TARGET_BOOTLOADER_BOARD_NAME := foles
-
 # Platform
 PRODUCT_PLATFORM := sm6150
+
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := foles
 
 # Partition information
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
@@ -34,11 +32,10 @@ BOARD_EROFS_PCLUSTER_SIZE := 262144
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
 
-TARGET_SURFACEFLINGER_UDFPS_LIB := //device/motorola/okinawa:libudfps_extension.okinawa
-TARGET_USES_FOD_ZPOS := true
-
 # Fingerprint
+TARGET_SURFACEFLINGER_UDFPS_LIB := //device/motorola/okinawa:libudfps_extension.okinawa
 TARGET_USES_FINGERPRINT_V2_1 := false
+TARGET_USES_FOD_ZPOS := true
 
 # PlatformConfig
 include device/motorola/sm6150-common/PlatformConfig.mk

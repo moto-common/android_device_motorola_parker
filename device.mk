@@ -12,10 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-TARGET_USES_LEGACY_AB := true
-
 # Device path
 DEVICE_PATH := device/motorola/okinawa/rootdir
+
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.sf.lcd_density=400
 
 # Audio Configuration
 PRODUCT_COPY_FILES += \
@@ -24,10 +30,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/vendor/etc/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     $(DEVICE_PATH)/vendor/etc/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
-# Device Init
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/vendor/etc/init/init.okinawa.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.okinawa.rc
-
 # Camera
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++.so
@@ -35,12 +37,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libc++demangle_vendor
 
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-PRODUCT_PROPERTY_OVERRIDES := \
-    ro.sf.lcd_density=400
+# Device Init
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/vendor/etc/init/init.okinawa.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.okinawa.rc
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -49,6 +48,9 @@ PRODUCT_PACKAGES += \
 # Media
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/vendor/etc/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
+
+# Partitions
+TARGET_USES_LEGACY_AB := true
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += device/motorola/okinawa
