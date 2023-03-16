@@ -1,4 +1,4 @@
 runtime_resource_overlay {
-    name: "okinawaFrameworksOverlay",
+    name: "parkerFrameworksOverlay",
     vendor: true,
 }

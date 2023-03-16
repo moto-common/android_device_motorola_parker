@@ -17,7 +17,7 @@
 */
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.systemui.okinawa">
+    package="com.android.systemui.parker">
 
     <overlay
         android:isStatic="true"

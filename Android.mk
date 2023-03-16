@@ -1,4 +1,4 @@
-ifeq (okinawa,$(TARGET_DEVICE))
+ifeq (parker,$(TARGET_DEVICE))
 
 LOCAL_PATH := $(call my-dir)
 

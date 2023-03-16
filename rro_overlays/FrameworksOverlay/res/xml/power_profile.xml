@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <device name="Android">
     <item name="none">0</item>
-    <item name="screen.on">101.431</item>
-    <item name="screen.full">275.550</item>
+    <item name="screen.on">148.424</item>
+    <item name="screen.full">240.43</item>
     <item name="wifi.on">0.606</item>
     <item name="wifi.active">74.462</item>
     <item name="wifi.scan">25.088</item>
-    <item name="camera.avg">374.399</item>
-    <item name="camera.flashlight">265.769</item>
+    <item name="camera.avg">829.951</item>
+    <item name="camera.flashlight">181.85</item>
     <item name="gps.on">21.412</item>
     <item name="radio.active">208.332</item>
     <item name="radio.scanning">46.310</item>
@@ -75,8 +75,16 @@
     </array>
     <item name="cpu.cluster_power.cluster0">0.7</item>
     <item name="cpu.cluster_power.cluster1">6.7</item>
-    <item name="cpu.suspend">3.993</item>
-    <item name="cpu.idle">2.969</item>
+    <item name="cpu.suspend">4.80</item>
+    <item name="cpu.idle">5.68</item>
     <item name="cpu.active">3</item>
-    <item name="battery.capacity">3600</item>
+    <item name="battery.capacity">4000</item>
+    <!-- Idle current for bluetooth in mA.-->
+    <item name="bluetooth.controller.idle">0.01</item>
+    <!-- Rx current for bluetooth in mA.-->
+    <item name="bluetooth.controller.rx">9</item>
+    <!-- Tx current for bluetooth in mA-->
+    <item name="bluetooth.controller.tx">7</item>
+    <!-- Operating voltage for bluetooth in mV.-->
+    <item name="bluetooth.controller.voltage">3300</item>
 </device>

@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Device path
-DEVICE_PATH := device/motorola/okinawa/rootdir
+DEVICE_PATH := device/motorola/parker/rootdir
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -39,11 +39,11 @@ PRODUCT_PACKAGES += \
 
 # Device Init
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/vendor/etc/init/init.okinawa.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.okinawa.rc
+    $(DEVICE_PATH)/vendor/etc/init/init.parker.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.parker.rc
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service-okinawa
+    android.hardware.biometrics.fingerprint@2.3-service-parker
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -53,10 +53,10 @@ PRODUCT_COPY_FILES += \
 TARGET_USES_LEGACY_AB := true
 
 # Soong
-PRODUCT_SOONG_NAMESPACES += device/motorola/okinawa
+PRODUCT_SOONG_NAMESPACES += device/motorola/parker
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/motorola/sm6150-common/platform.mk)
 
 # include board vendor blobs
-$(call inherit-product-if-exists, vendor/motorola/okinawa/okinawa-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/parker/parker-vendor.mk)
